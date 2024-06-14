@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form action="/admin" method="post">
+      {% if name and familyname %}
+          <h1>admin: {{ name }} {{ familyname }}</h1>
+      {% endif %}
+      {% if data1 %}
+        <table border="1">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>familyname</th>
+                <th>username</th>
+                <th>password</th>
+                <th>permission</th>
+            </tr>
+            {% for mytuple in data1 %}
+                <tr>
+                  {% for element in mytuple %}
+                      <td>{{ element }}</td>
+                  {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+      {% endif %}
+      <br>
+      <label>id: </label>
+      <input type="text" name="id"><br>
+      <label>field: </label>
+      <input type="text" name="field"><br>
+      <label>new value: </label>
+      <input type="value" name="value"><br>
+      <input type="submit" value="ok"><br>
+  </form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.d1{
+    border: black solid 2px;
+    height: 150px;
+    width: 200px;
+    position: absolute;
+    margin: auto 0;
+}
+
+label{
+    color: crimson;
+}
